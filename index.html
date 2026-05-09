@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Practica THREE.js</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="canvas-3d"></canvas>
+
+  <div id="portal-instruction">Haz click en el portal para teletransportarte</div>
+
+  <div id="portal-menu" class="hidden">
+    <div class="menu-content">
+      <h2>¿A qué mundo te quieres transportar?</h2>
+      <button data-world="bosque">Bosque</button>
+      <button data-world="lava">Lava</button>
+      <button data-world="nieve">Nieve</button>
+      <button id="portal-menu-close">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- IMPORT MAP -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>

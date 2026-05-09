@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #10141c;
+}
+
+#canvas-3d {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#portal-menu {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  color: #f3f3f3;
+  font-family: system-ui, sans-serif;
+  z-index: 10;
+  padding: 1rem;
+}
+
+#portal-menu.hidden {
+  display: none;
+}
+
+#portal-menu .menu-content {
+  width: min(90vw, 420px);
+  border: 2px solid #6cf;
+  border-radius: 16px;
+  background: rgba(16, 20, 28, 0.96);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#portal-menu h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+#portal-menu p {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+#portal-menu button {
+  margin: 0.25rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2b3a5a;
+  color: #f3f3f3;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#portal-menu button:hover {
+  transform: translateY(-1px);
+  background: #3f5a8a;
+}
+
+#portal-menu button#portal-menu-close {
+  background: #a33;
+}
+
+#portal-menu button#portal-menu-close:hover {
+  background: #c55;
+}
+
+#portal-instruction {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.65);
+  color: #f3f3f3;
+  border: 1px solid #6cf;
+  border-radius: 12px;
+  font-family: system-ui, sans-serif;
+  z-index: 5;
+  max-width: min(90vw, 320px);
+  text-align: center;
+}
